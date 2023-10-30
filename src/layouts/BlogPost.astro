@@ -27,7 +27,7 @@ const includesKatex = Astro.props
 
 const readingTime = calculateReadingTime(Astro.props.compiledContent());
 
-const editUrl = `https://github.com/JonasKruckenberg/JonasKruckenberg/edit/main/src/pages${Astro.url.pathname}.md`;
+const editUrl = `https://github.com/JonasKruckenberg/JonasKruckenberg/edit/main/src/pages${Astro.url.pathname.replace(/\/$/, "")}.md`;
 ---
 
 <BaseLayout title={title} description={description}>
