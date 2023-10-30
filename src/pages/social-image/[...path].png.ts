@@ -7,8 +7,8 @@ const sharp = cjs('sharp');
 
 const blogPosts = Object.fromEntries(Object.entries(import.meta.glob("../blog/*.{md,mdx}")).map(([path, getInfo]) => {
     path = path.replaceAll('../', '')
-    path = path.replace('.md', '')
     path = path.replace('.mdx', '')
+    path = path.replace('.md', '')
 
     return [path, getInfo]
 }))
